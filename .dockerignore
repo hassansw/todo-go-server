@@ -1,0 +1,6 @@
+.env
+.git
+.gitignore
+uploads/
+*.md
+todo-server

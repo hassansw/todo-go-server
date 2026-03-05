@@ -23,16 +23,16 @@ type Config struct {
 
 	// JWT
 	JWTSecret          string
-	AccessTokenExpiry   time.Duration
-	RefreshTokenExpiry  time.Duration
+	AccessTokenExpiry  time.Duration
+	RefreshTokenExpiry time.Duration
 
 	// Upload
 	UploadDir     string
 	MaxUploadSize int64 // bytes
 
 	// Rate Limiting
-	RateLimit       float64 // requests per second
-	RateBurst       int
+	RateLimit float64 // requests per second
+	RateBurst int
 
 	// CORS
 	AllowedOrigins []string

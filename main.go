@@ -16,9 +16,16 @@ import (
 	mw "todo-server-secure/internal/middleware"
 	"todo-server-secure/internal/store"
 	"todo-server-secure/internal/upload"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// ---------- Load .env (ignored if file absent) ----------
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found, reading from environment")
+	}
+
 	// ---------- Config ----------
 	cfg, err := config.Load()
 	if err != nil {
